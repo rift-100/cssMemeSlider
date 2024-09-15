@@ -6,6 +6,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    transition: all 3s ease;
 }
 
 h1 {
@@ -71,7 +72,6 @@ h1 {
     height: 2em;
     background-color: yellow;
     border: 0.5em solid red;
-    /* margin-left: 0.5em; */
 }
 
 .control-wrapper {
@@ -85,4 +85,59 @@ h1 {
 
 .control-wrapper:active {
     opacity: 0.9;
+}
+
+#radio-1,
+#radio-2,
+#radio-3,
+#radio-4 {
+    display: none;
+}
+
+#radio-1:checked ~ .slider #control-1 {
+    background-color: black;
+}
+
+#radio-2:checked ~ .slider #control-2 {
+    background-color: black;
+}
+
+#radio-3:checked ~ .slider #control-3 {
+    background-color: black;
+}
+
+#radio-4:checked ~ .slider #control-4 {
+    background-color: black;
+}
+
+#radio-2:checked ~ .slider #slider-image-1,
+#radio-2:checked ~ .slider #text-1 {
+    margin-left: -100%;
+}
+
+#radio-3:checked ~ .slider #slider-image-1,
+#radio-3:checked ~ .slider #text-1 {
+    margin-left: -200%;
+}
+
+#radio-4:checked ~ .slider #slider-image-1,
+#radio-4:checked ~ .slider #text-1 {
+    margin-left: -300%;
+}
+
+@media (max-width: 767px) {
+    .text-and-controls {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .controls-container {
+        margin-left: 0;
+    }
+    .text-container {
+        flex-grow: 0;
+    }
+
+    .text {
+        text-align: left;
+    }
 }

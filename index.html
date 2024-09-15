@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1>CSS MEMES SLIDER</h1>
+    <input type="radio" id="radio-1" name="slides" checked>
+    <input type="radio" id="radio-2" name="slides">
+    <input type="radio" id="radio-3" name="slides">
+    <input type="radio" id="radio-4" name="slides">
     <div class="slider">
         <div class="slider-images">
             <div class="slider-image" id="slider-image-1">
@@ -25,24 +29,24 @@
         </div>
         <div class="text-and-controls">
             <div class="text-container">
-                <p class="text">Быть 28 летним в 1000 году до нашей эры</p>
-                <p class="text">Как стать программистом</p>
-                <p class="text">Изысканный программист</p>
-                <p class="text">Что за зануда, даже поговорить не о чем</p>
+                <p class="text" id="text-1">Быть 28 летним в 1000 году до нашей эры</p>
+                <p class="text" id="text-2">Как стать программистом</p>
+                <p class="text" id="text-3">Изысканный программист</p>
+                <p class="text" id="text-4">Что за зануда, даже поговорить не о чем</p>
             </div>
             <div class="controls-container">
-                <div class="control-wrapper">
+                <label for="radio-1" class="control-wrapper">
                     <div class="control" id="control-1"></div>
-                </div>
-                <div class="control-wrapper">
-                    <div class="control" id="control-2  "></div>
-                </div>
-                <div class="control-wrapper">
+                </label>
+                <label for="radio-2" class="control-wrapper">
+                    <div class="control" id="control-2"></div>
+                </label>
+                <label for="radio-3" class="control-wrapper">
                     <div class="control" id="control-3"></div>
-                </div>
-                <div class="control-wrapper">
+                </label>
+                <label for="radio-4" class="control-wrapper">
                     <div class="control" id="control-4"></div>
-                </div>
+                </label>
         </div>
     </div>
 </body>
