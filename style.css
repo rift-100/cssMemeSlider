@@ -10,4 +10,29 @@ body {
 
 h1 {
     text-align: center;
+    background-color: blueviolet;
+    margin: 0;
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color:cadetblue;
+}
+
+.slider-images {
+    display: flex;
+    width: 100%;
+    flex-wrap: no-wrap;
+    overflow: hidden;
+}
+
+.slider-images img {
+    display: block;
+    width: 100%;
+}
+
+.slider-image {
+    flex-shrink: 0;
+    width: 100%;
 }
