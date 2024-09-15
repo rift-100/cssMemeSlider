@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    transition: all 3s ease;
+}
+
+h1 {
+    text-align: center;
+    background-color: blueviolet;
+    margin: 0;
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color:cadetblue;
+}
+
+.slider-images {
+    display: flex;
+    width: 100%;
+    flex-wrap: no-wrap;
+    overflow: hidden;
+}
+
+.slider-images img {
+    display: block;
+    width: 100%;
+}
+
+.slider-image {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.text-and-controls {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    flex-direction: row;
+    flex-grow: 2;
+}
+
+.text {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.control {
+    width: 2em;
+    height: 2em;
+    background-color: yellow;
+    border: 0.5em solid red;
+}
+
+.control-wrapper {
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.control-wrapper:hover {
+    opacity: 0.8;
+}
+
+.control-wrapper:active {
+    opacity: 0.9;
+}
+
+#radio-1,
+#radio-2,
+#radio-3,
+#radio-4 {
+    display: none;
+}
+
+#radio-1:checked ~ .slider #control-1 {
+    background-color: black;
+}
+
+#radio-2:checked ~ .slider #control-2 {
+    background-color: black;
+}
+
+#radio-3:checked ~ .slider #control-3 {
+    background-color: black;
+}
+
+#radio-4:checked ~ .slider #control-4 {
+    background-color: black;
+}
+
+#radio-2:checked ~ .slider #slider-image-1,
+#radio-2:checked ~ .slider #text-1 {
+    margin-left: -100%;
+}
+
+#radio-3:checked ~ .slider #slider-image-1,
+#radio-3:checked ~ .slider #text-1 {
+    margin-left: -200%;
+}
+
+#radio-4:checked ~ .slider #slider-image-1,
+#radio-4:checked ~ .slider #text-1 {
+    margin-left: -300%;
+}
+
+@media (max-width: 767px) {
+    .text-and-controls {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .controls-container {
+        margin-left: 0;
+    }
+    .text-container {
+        flex-grow: 0;
+    }
+
+    .text {
+        text-align: left;
+    }
+}
